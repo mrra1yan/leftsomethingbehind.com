@@ -1,0 +1,86 @@
+.hero {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 560px;
+  text-align: center;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.headline {
+  margin: 0;
+  font-size: var(--fs-display);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.line {
+  display: block;
+}
+
+.subhead {
+  margin: 0;
+  font-size: var(--fs-body-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.ctaRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 320px;
+}
+
+.visual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-16);
+    text-align: left;
+  }
+
+  .copy {
+    text-align: left;
+    align-items: flex-start;
+    flex: 1;
+  }
+
+  .ctaRow {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .visual {
+    flex: 1;
+  }
+}

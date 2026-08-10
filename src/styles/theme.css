@@ -1,0 +1,64 @@
+:root {
+  /* Colors */
+  --color-primary: #12304a;
+  --color-primary-hover: #0d263b;
+  --color-primary-light: #eaf4fb;
+  --color-success: #18a673;
+  --color-success-hover: #12865d;
+  --color-success-light: #e8f8f1;
+  --color-accent-blue: #4da3d9;
+  --color-accent-light: #eaf5fc;
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text-primary: #17212b;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-warning: #f59e0b;
+  --color-danger: #dc4c4c;
+  --color-info: #3b82f6;
+  --color-on-dark: #ffffff;
+  --color-on-dark-secondary: rgba(255, 255, 255, 0.72);
+  --color-on-dark-border: rgba(255, 255, 255, 0.16);
+
+  /* Typography */
+  --font-family-base: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fs-display: 56px;
+  --fs-h1: 44px;
+  --fs-h2: 36px;
+  --fs-h3: 28px;
+  --fs-body-lg: 18px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-button: 15px;
+
+  /* Radii */
+  --radius-card: 14px;
+  --radius-control: 10px;
+  --radius-feature: 20px;
+  --radius-pill: 999px;
+
+  /* Spacing (8px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Shadows (soft only) */
+  --shadow-sm: 0 1px 2px rgba(23, 33, 43, 0.06);
+  --shadow-md: 0 4px 16px rgba(23, 33, 43, 0.08);
+  --shadow-lg: 0 12px 32px rgba(23, 33, 43, 0.1);
+
+  /* Layout */
+  --container-max: 1280px;
+  --header-height: 72px;
+}

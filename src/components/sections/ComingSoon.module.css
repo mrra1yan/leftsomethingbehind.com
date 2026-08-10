@@ -1,0 +1,12 @@
+.comingSoon {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  text-align: center;
+}

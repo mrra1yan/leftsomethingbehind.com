@@ -1,0 +1,63 @@
+.illustration {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+}
+
+.backdropOuter {
+  fill: var(--color-accent-light);
+  opacity: 0.6;
+}
+
+.backdropInner {
+  fill: var(--color-primary-light);
+  opacity: 0.7;
+}
+
+.tagLost {
+  font-family: var(--font-family-base);
+  font-size: 11px;
+  font-weight: 700;
+  fill: var(--color-primary);
+  letter-spacing: 0.04em;
+}
+
+.tagFound {
+  font-family: var(--font-family-base);
+  font-size: 11px;
+  font-weight: 700;
+  fill: var(--color-success-hover);
+  letter-spacing: 0.04em;
+}
+
+.matchPing {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dashLine {
+    animation: dash-travel 2.4s linear infinite;
+  }
+
+  .matchPing {
+    animation: match-pulse 2.2s ease-out infinite;
+  }
+}
+
+@keyframes dash-travel {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes match-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.22;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}

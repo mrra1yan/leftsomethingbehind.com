@@ -1,0 +1,10 @@
+.finalCta {
+  background: var(--color-primary);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+}
