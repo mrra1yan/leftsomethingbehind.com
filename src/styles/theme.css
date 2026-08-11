@@ -27,12 +27,12 @@
   --color-danger: #dc4c4c;
   --color-info: #3b82f6;
 
-  /* On-dark tokens */
+  /* On-dark tokens (for intentionally dark sections) */
   --color-on-dark: #ffffff;
   --color-on-dark-secondary: rgba(255, 255, 255, 0.72);
   --color-on-dark-border: rgba(255, 255, 255, 0.16);
 
-  /* Semantic component tokens — override in dark mode */
+  /* Semantic component tokens */
   --color-input-bg: #ffffff;
   --color-overlay: rgba(18, 48, 74, 0.55);
   --color-focus-ring: rgba(77, 163, 217, 0.22);
@@ -84,33 +84,4 @@
   /* Layout */
   --container-max: 1280px;
   --header-height: 72px;
-}
-
-[data-theme='dark'] {
-  --color-background: #0f1923;
-  --color-surface: #1a2636;
-  --color-text-primary: #e8edf2;
-  --color-text-secondary: #8fa4b8;
-  --color-text-muted: #4f6577;
-  --color-border: #243040;
-  --color-border-strong: #2e3f52;
-  --color-primary-light: #1a3048;
-  --color-success-light: #112b22;
-  --color-accent-light: #152434;
-
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
-
-  --color-input-bg: #243040;
-  --color-overlay: rgba(0, 0, 0, 0.72);
-  --color-focus-ring: rgba(77, 163, 217, 0.35);
-  --color-success-subtle: rgba(24, 166, 115, 0.12);
-  --color-error-text: #ff8080;
-  --color-hover-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
-  --color-blob-blue: rgba(77, 163, 217, 0.07);
-  --color-blob-green: rgba(24, 166, 115, 0.06);
-  --color-badge-success-border: rgba(24, 166, 115, 0.35);
-  --color-badge-primary-border: rgba(77, 163, 217, 0.2);
-  --color-svg-surface: #243040;
 }

@@ -1,57 +1,80 @@
 .faq {
-  background: var(--color-surface);
+  background: var(--color-background);
 }
 
-.grid {
+.list {
   margin-top: var(--space-12);
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-5);
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.card {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  padding: var(--space-8);
-  background: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-accent-blue);
+}
+
+.item {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
   border-radius: var(--radius-card);
-  transition: box-shadow 0.22s ease, transform 0.22s ease, border-left-color 0.22s ease;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover {
+.itemOpen {
+  border-color: var(--color-primary-light);
   box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
-  border-left-color: var(--color-primary);
-}
-
-.number {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  color: var(--color-accent-blue);
-  text-transform: uppercase;
 }
 
 .question {
-  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  background: none;
+  border: none;
+  text-align: left;
   font-size: var(--fs-body);
   font-weight: 700;
   color: var(--color-text-primary);
-  line-height: 1.4;
+  cursor: pointer;
+  line-height: 1.45;
+  transition: color 0.15s ease;
 }
 
+.question:hover {
+  color: var(--color-primary);
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), color 0.15s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  color: var(--color-primary);
+}
+
+/* Animated height */
 .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.answerOpen {
+  max-height: 400px;
+}
+
+.answerText {
   margin: 0;
+  padding: 0 var(--space-6) var(--space-6);
   font-size: var(--fs-body);
   color: var(--color-text-secondary);
   line-height: 1.7;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
 }
