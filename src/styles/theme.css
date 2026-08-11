@@ -62,3 +62,21 @@
   --container-max: 1280px;
   --header-height: 72px;
 }
+
+/* ── Dark mode overrides ── */
+[data-theme='dark'] {
+  --color-background: #0f1923;
+  --color-surface: #1a2636;
+  --color-text-primary: #e8edf2;
+  --color-text-secondary: #8fa4b8;
+  --color-text-muted: #4f6577;
+  --color-border: #243040;
+  --color-border-strong: #2e3f52;
+  --color-primary-light: #1a3048;
+  --color-success-light: #112b22;
+  --color-accent-light: #152434;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+}

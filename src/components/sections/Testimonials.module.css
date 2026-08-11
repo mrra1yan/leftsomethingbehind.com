@@ -1,0 +1,136 @@
+.testimonials {
+  background: var(--color-background);
+}
+
+.carousel {
+  max-width: 680px;
+  margin: var(--space-12) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-feature);
+  padding: var(--space-10) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  box-shadow: var(--shadow-md);
+  animation: fade-slide 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+}
+
+.star {
+  fill: var(--color-warning);
+  color: var(--color-warning);
+}
+
+.quote {
+  margin: 0;
+}
+
+.quote p {
+  margin: 0;
+  font-size: var(--fs-body-lg);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-body-lg);
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.name {
+  margin: 0;
+  font-weight: 700;
+  font-size: var(--fs-body);
+  color: var(--color-text-primary);
+}
+
+.role {
+  margin: 0;
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-5);
+}
+
+.ctrlBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.ctrlBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.dots {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border-strong);
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dotActive {
+  background: var(--color-primary);
+  transform: scale(1.35);
+}
+
+@keyframes fade-slide {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 639px) {
+  .card {
+    padding: var(--space-6) var(--space-5);
+  }
+}

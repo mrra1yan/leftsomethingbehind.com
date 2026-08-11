@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 import Button from '../ui/Button.jsx';
 import Logo from '../ui/Logo.jsx';
 import { navLinks } from '../../data/content.js';
+import { useDarkMode } from '../../hooks/useDarkMode.js';
 import styles from './Header.module.css';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [dark, setDark] = useDarkMode();
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 4);
@@ -34,6 +36,19 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
+          {/* Dark mode toggle */}
+          <button
+            type="button"
+            className={styles.themeToggle}
+            onClick={() => setDark((d) => !d)}
+            aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+            aria-pressed={dark}
+          >
+            {dark
+              ? <Sun size={17} aria-hidden="true" />
+              : <Moon size={17} aria-hidden="true" />
+            }
+          </button>
           <Button href="#" variant="ghost">
             Sign In
           </Button>
@@ -42,16 +57,30 @@ export default function Header() {
           </Button>
         </div>
 
-        <button
-          type="button"
-          className={styles.menuToggle}
-          aria-expanded={isOpen}
-          aria-controls="mobile-nav"
-          aria-label={isOpen ? 'Close menu' : 'Open menu'}
-          onClick={() => setIsOpen((v) => !v)}
-        >
-          {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
-        </button>
+        <div className={styles.mobileRight}>
+          <button
+            type="button"
+            className={styles.themeToggle}
+            onClick={() => setDark((d) => !d)}
+            aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+            aria-pressed={dark}
+          >
+            {dark
+              ? <Sun size={17} aria-hidden="true" />
+              : <Moon size={17} aria-hidden="true" />
+            }
+          </button>
+          <button
+            type="button"
+            className={styles.menuToggle}
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav"
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            onClick={() => setIsOpen((v) => !v)}
+          >
+            {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+          </button>
+        </div>
       </div>
 
       <div

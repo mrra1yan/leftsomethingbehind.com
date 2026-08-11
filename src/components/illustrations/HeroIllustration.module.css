@@ -1,3 +1,9 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .illustration {
   width: 100%;
   max-width: 480px;
