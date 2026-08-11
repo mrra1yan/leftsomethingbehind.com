@@ -59,7 +59,7 @@
   justify-content: center;
   font-size: var(--fs-body-lg);
   font-weight: 700;
-  color: #fff;
+  color: var(--color-on-dark);
   flex-shrink: 0;
 }
 

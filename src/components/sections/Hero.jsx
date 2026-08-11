@@ -4,13 +4,20 @@ import ReportModal from '../ui/ReportModal.jsx';
 import HeroIllustration from '../illustrations/HeroIllustration.jsx';
 import styles from './Hero.module.css';
 
+// Use CSS variable strings so these respond to dark mode
+const AVATAR_COLORS = [
+  'var(--color-accent-blue)',
+  'var(--color-success)',
+  'var(--color-primary)',
+  'var(--color-warning)',
+];
+
 export default function Hero() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
       <section id="top" className={`${styles.hero} section`}>
-        {/* Decorative gradient blobs */}
         <div className={styles.blobTL} aria-hidden="true" />
         <div className={styles.blobBR} aria-hidden="true" />
 
@@ -35,7 +42,7 @@ export default function Hero() {
             </div>
             <p className={styles.social}>
               <span className={styles.avatars} aria-hidden="true">
-                {['#4da3d9', '#18a673', '#12304a', '#f59e0b'].map((c, i) => (
+                {AVATAR_COLORS.map((c, i) => (
                   <span key={i} className={styles.avatar} style={{ background: c }} />
                 ))}
               </span>

@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0;
   z-index: 800;
-  background: rgba(18, 48, 74, 0.55);
+  background: var(--color-overlay);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
@@ -89,7 +89,7 @@
 .stepActive .stepDot {
   background: var(--color-primary);
   border-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-dark);
 }
 
 .stepDone .stepDot {
@@ -173,7 +173,6 @@
   font-size: var(--fs-small);
   font-weight: 700;
   color: var(--color-text-primary);
-  margin-bottom: -var(--space-2);
 }
 
 .input {
@@ -182,7 +181,7 @@
   padding: 0 var(--space-4);
   border: 1.5px solid var(--color-border-strong);
   border-radius: var(--radius-control);
-  background: var(--color-background);
+  background: var(--color-input-bg);
   font-size: var(--fs-body);
   color: var(--color-text-primary);
   font-family: inherit;
@@ -193,7 +192,7 @@
 
 .input:focus {
   border-color: var(--color-accent-blue);
-  box-shadow: 0 0 0 3px rgba(77, 163, 217, 0.18);
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
 }
 
 .textarea {

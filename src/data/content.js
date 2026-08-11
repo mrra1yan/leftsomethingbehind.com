@@ -144,24 +144,24 @@ export const testimonials = [
     name: 'Farhan Ahmed',
     role: 'Frequent traveller, Dhaka',
     quote: 'I left my passport holder at the airport and honestly thought it was gone forever. This platform connected me with the airline lounge staff within an hour. Incredible.',
-    avatarColor: '#12304a',
+    avatarColor: 'var(--color-primary)',
   },
   {
     name: 'Nadia Islam',
     role: 'Student, NSU',
     quote: 'My MacBook was reported found on campus before I even realised it was missing. The notification came through so fast. I was in tears.',
-    avatarColor: '#18a673',
+    avatarColor: 'var(--color-success)',
   },
   {
     name: 'Rafiq Hossain',
     role: 'Hotel Manager, Sylhet',
     quote: 'As a hotel we deal with lost items every week. Left Something Behind gives us a proper system instead of a cardboard box in the back office. Game changer.',
-    avatarColor: '#4da3d9',
+    avatarColor: 'var(--color-accent-blue)',
   },
   {
     name: 'Tasneem Chowdhury',
     role: 'Entrepreneur, Chittagong',
     quote: "The matching process is surprisingly accurate. It surfaced my lost bag report against a found report from a café I had completely forgotten visiting. Love it.",
-    avatarColor: '#f59e0b',
+    avatarColor: 'var(--color-warning)',
   },
 ];

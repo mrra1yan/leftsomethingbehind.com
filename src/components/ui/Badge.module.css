@@ -12,13 +12,13 @@
 .success {
   background: var(--color-success-light);
   color: var(--color-success-hover);
-  border-color: rgba(24, 166, 115, 0.24);
+  border-color: var(--color-badge-success-border);
 }
 
 .primary {
   background: var(--color-primary-light);
   color: var(--color-primary);
-  border-color: rgba(18, 48, 74, 0.16);
+  border-color: var(--color-badge-primary-border);
 }
 
 .dotWrap {

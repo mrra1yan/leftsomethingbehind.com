@@ -1,5 +1,5 @@
 :root {
-  /* Colors */
+  /* Brand colors */
   --color-primary: #12304a;
   --color-primary-hover: #0d263b;
   --color-primary-light: #eaf4fb;
@@ -8,19 +8,42 @@
   --color-success-light: #e8f8f1;
   --color-accent-blue: #4da3d9;
   --color-accent-light: #eaf5fc;
+
+  /* Surface / background */
   --color-background: #f8fafc;
   --color-surface: #ffffff;
+
+  /* Text */
   --color-text-primary: #17212b;
   --color-text-secondary: #64748b;
   --color-text-muted: #94a3b8;
+
+  /* Borders */
   --color-border: #e2e8f0;
   --color-border-strong: #cbd5e1;
+
+  /* Status */
   --color-warning: #f59e0b;
   --color-danger: #dc4c4c;
   --color-info: #3b82f6;
+
+  /* On-dark tokens */
   --color-on-dark: #ffffff;
   --color-on-dark-secondary: rgba(255, 255, 255, 0.72);
   --color-on-dark-border: rgba(255, 255, 255, 0.16);
+
+  /* Semantic component tokens — override in dark mode */
+  --color-input-bg: #ffffff;
+  --color-overlay: rgba(18, 48, 74, 0.55);
+  --color-focus-ring: rgba(77, 163, 217, 0.22);
+  --color-success-subtle: rgba(24, 166, 115, 0.16);
+  --color-error-text: #ffb4b4;
+  --color-hover-shadow: 0 20px 48px rgba(23, 33, 43, 0.14);
+  --color-blob-blue: rgba(77, 163, 217, 0.14);
+  --color-blob-green: rgba(24, 166, 115, 0.12);
+  --color-badge-success-border: rgba(24, 166, 115, 0.24);
+  --color-badge-primary-border: rgba(18, 48, 74, 0.16);
+  --color-svg-surface: #ffffff;
 
   /* Typography */
   --font-family-base: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -39,7 +62,7 @@
   --radius-feature: 20px;
   --radius-pill: 999px;
 
-  /* Spacing (8px base) */
+  /* Spacing */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -53,7 +76,7 @@
   --space-20: 80px;
   --space-24: 96px;
 
-  /* Shadows (soft only) */
+  /* Shadows */
   --shadow-sm: 0 1px 2px rgba(23, 33, 43, 0.06);
   --shadow-md: 0 4px 16px rgba(23, 33, 43, 0.08);
   --shadow-lg: 0 12px 32px rgba(23, 33, 43, 0.1);
@@ -63,7 +86,6 @@
   --header-height: 72px;
 }
 
-/* ── Dark mode overrides ── */
 [data-theme='dark'] {
   --color-background: #0f1923;
   --color-surface: #1a2636;
@@ -79,4 +101,16 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+
+  --color-input-bg: #243040;
+  --color-overlay: rgba(0, 0, 0, 0.72);
+  --color-focus-ring: rgba(77, 163, 217, 0.35);
+  --color-success-subtle: rgba(24, 166, 115, 0.12);
+  --color-error-text: #ff8080;
+  --color-hover-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+  --color-blob-blue: rgba(77, 163, 217, 0.07);
+  --color-blob-green: rgba(24, 166, 115, 0.06);
+  --color-badge-success-border: rgba(24, 166, 115, 0.35);
+  --color-badge-primary-border: rgba(77, 163, 217, 0.2);
+  --color-svg-surface: #243040;
 }

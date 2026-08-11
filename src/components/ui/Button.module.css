@@ -25,7 +25,7 @@
 
 .primary {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-dark);
 }
 
 .primary:hover {
@@ -58,7 +58,7 @@
 
 .onDark {
   background: var(--color-success);
-  color: #fff;
+  color: var(--color-on-dark);
 }
 
 .onDark:hover {

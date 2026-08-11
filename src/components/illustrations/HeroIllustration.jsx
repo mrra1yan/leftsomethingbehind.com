@@ -15,14 +15,13 @@ export default function HeroIllustration() {
       const el = containerRef.current;
       if (!el) return;
       const rect = el.getBoundingClientRect();
-      // Normalise to -1 … +1 relative to the element centre
       const cx = rect.left + rect.width / 2;
       const cy = rect.top + rect.height / 2;
       const clientX = e.touches ? e.touches[0].clientX : e.clientX;
       const clientY = e.touches ? e.touches[0].clientY : e.clientY;
       const nx = (clientX - cx) / (rect.width / 2);
       const ny = (clientY - cy) / (rect.height / 2);
-      setOffset({ x: nx * 10, y: ny * 8 }); // max 10px / 8px shift
+      setOffset({ x: nx * 10, y: ny * 8 });
     };
 
     const handleLeave = () => setOffset({ x: 0, y: 0 });
@@ -77,18 +76,25 @@ export default function HeroIllustration() {
             stroke="var(--color-primary)" strokeOpacity="0.24"
           />
           <rect x="46" y="76" width="44" height="44" rx="12" fill="var(--color-primary)" />
+          {/* Plus icon — white stroke on primary fill, always readable */}
           <path d="M60 98h16M68 90v16" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" />
           <rect x="104" y="84" width="98" height="9" rx="4.5" fill="var(--color-primary)" opacity="0.32" />
           <rect x="104" y="102" width="66" height="9" rx="4.5" fill="var(--color-primary)" opacity="0.18" />
-          <rect x="46" y="140" width="56" height="24" rx="12" fill="#fff" stroke="var(--color-primary)" strokeOpacity="0.28" />
+          {/* LOST tag — fill adapts to dark mode via CSS var */}
+          <rect
+            x="46" y="140" width="56" height="24" rx="12"
+            style={{ fill: 'var(--color-svg-surface)' }}
+            stroke="var(--color-primary)" strokeOpacity="0.28"
+          />
           <text x="74" y="156" textAnchor="middle" className={styles.tagLost}>LOST</text>
-          {/* Location pin accent */}
+          {/* Location pin */}
           <path
             className={styles.pin}
             d="M214 30c-11 0-20 8.6-20 19.3 0 14.5 20 37.7 20 37.7s20-23.2 20-37.7C234 38.6 225 30 214 30z"
             fill="var(--color-accent-blue)"
           />
-          <circle cx="214" cy="49" r="7" fill="#fff" />
+          {/* Pin inner circle — adapts to dark mode */}
+          <circle cx="214" cy="49" r="7" style={{ fill: 'var(--color-svg-surface)' }} />
         </g>
 
         {/* Found item card — parallax layer B */}
@@ -99,19 +105,30 @@ export default function HeroIllustration() {
             stroke="var(--color-success)" strokeOpacity="0.28"
           />
           <rect x="266" y="254" width="44" height="44" rx="12" fill="var(--color-success)" />
+          {/* Checkmark — white stroke on success fill, always readable */}
           <path d="M279 276l7 7 13-15" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
           <rect x="324" y="262" width="102" height="9" rx="4.5" fill="var(--color-success)" opacity="0.32" />
           <rect x="324" y="280" width="70" height="9" rx="4.5" fill="var(--color-success)" opacity="0.2" />
-          <rect x="266" y="318" width="64" height="24" rx="12" fill="#fff" stroke="var(--color-success)" strokeOpacity="0.3" />
+          {/* FOUND tag — fill adapts to dark mode via CSS var */}
+          <rect
+            x="266" y="318" width="64" height="24" rx="12"
+            style={{ fill: 'var(--color-svg-surface)' }}
+            stroke="var(--color-success)" strokeOpacity="0.3"
+          />
           <text x="298" y="334" textAnchor="middle" className={styles.tagFound}>FOUND</text>
           {/* Corner badge */}
           <circle cx="452" cy="240" r="20" fill="var(--color-success)" />
+          {/* Checkmark on badge — white stroke on success fill */}
           <path d="M443 240l6 6 12-13" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
         </g>
 
-        {/* Match badge — subtle parallax */}
+        {/* Match badge — subtle parallax, fill adapts to dark mode */}
         <g style={badgeStyle}>
-          <circle cx="224" cy="195" r="21" fill="#fff" stroke="var(--color-accent-blue)" strokeWidth="2" />
+          <circle
+            cx="224" cy="195" r="21"
+            style={{ fill: 'var(--color-svg-surface)' }}
+            stroke="var(--color-accent-blue)" strokeWidth="2"
+          />
           <circle className={styles.matchPing} cx="224" cy="195" r="21" fill="var(--color-accent-blue)" opacity="0.16" />
           <circle cx="224" cy="195" r="6" fill="var(--color-accent-blue)" />
         </g>

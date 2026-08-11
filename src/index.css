@@ -160,7 +160,7 @@ h3 {
   top: -48px;
   left: var(--space-4);
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-dark);
   padding: var(--space-3) var(--space-5);
   border-radius: var(--radius-control);
   font-weight: 600;
