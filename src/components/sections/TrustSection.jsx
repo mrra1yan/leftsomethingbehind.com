@@ -18,16 +18,20 @@ export default function TrustSection() {
     >
       <div className="container">
         <SectionHeading
+          eyebrow="Why trust us"
           title="Built around one simple idea."
-          description="Lost items should not disappear into a forgotten corner. Left Something Behind makes it easier for people and organizations to report, discover and connect around lost and found items."
+          description="Lost items should not disappear into a forgotten corner. Left Something Behind makes it easier for people and organisations to report, discover and connect around lost and found items."
           align="center"
         />
 
-        <div className={styles.row}>
+        <div className={styles.grid}>
           {trustItems.map((item) => (
-            <div key={item.label} className={styles.item}>
-              <IconCircle icon={ICONS[item.icon]} tone="primary" />
-              <span className={styles.label}>{item.label}</span>
+            <div key={item.label} className={styles.card}>
+              <IconCircle icon={ICONS[item.icon]} tone="primary" size="lg" />
+              <div className={styles.cardBody}>
+                <h3 className={styles.cardTitle}>{item.label}</h3>
+                <p className={styles.cardDesc}>{item.description}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import Header from './components/layout/Header.jsx';
 import Footer from './components/layout/Footer.jsx';
 import Hero from './components/sections/Hero.jsx';
+import StatsBar from './components/sections/StatsBar.jsx';
 import ComingSoon from './components/sections/ComingSoon.jsx';
 import NotifyForm from './components/sections/NotifyForm.jsx';
 import HowItWorks from './components/sections/HowItWorks.jsx';
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <main id="main">
         <Hero />
+        <StatsBar />
         <ComingSoon />
         <NotifyForm />
         <HowItWorks />

@@ -13,17 +13,43 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-6);
+  gap: var(--space-8);
+}
+
+/* Business-type icon list */
+.typeList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3) var(--space-6);
+  width: 100%;
+}
+
+.typeItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.typeIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+  flex-shrink: 0;
 }
 
 .visual {
   width: 100%;
 }
 
+/* ── Desktop ── */
 @media (min-width: 1024px) {
   .inner {
     flex-direction: row;
     align-items: center;
+    gap: var(--space-20);
   }
 
   .copy {
@@ -32,5 +58,12 @@
 
   .visual {
     flex: 1;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 639px) {
+  .typeList {
+    grid-template-columns: 1fr;
   }
 }

@@ -5,25 +5,37 @@ import styles from './Hero.module.css';
 export default function Hero() {
   return (
     <section id="top" className={`${styles.hero} section`}>
+      {/* Decorative gradient blobs */}
+      <div className={styles.blobTL} aria-hidden="true" />
+      <div className={styles.blobBR} aria-hidden="true" />
+
       <div className={`container ${styles.inner}`}>
         <div className={styles.copy}>
           <p className={styles.eyebrow}>The simple way to find what you left behind</p>
           <h1 className={styles.headline}>
-            <span className={styles.line}>Left Something Behind?</span>
-            <span className={styles.line}>Let&rsquo;s Help You Find It.</span>
+            <span className={styles.line}>Lost Something?</span>
+            <span className={`${styles.line} ${styles.lineAccent}`}>Let&rsquo;s Find It.</span>
           </h1>
           <p className={styles.subhead}>
-            Lost something somewhere? Report it and discover potential matches from people and
-            businesses that may have found it.
+            Report what you lost or found, and our platform connects the right people — privately
+            and securely.
           </p>
           <div className={styles.ctaRow}>
             <Button href="#notify" variant="primary">
-              Get Notified
+              Get Early Access
             </Button>
             <Button href="#how-it-works" variant="secondary">
-              I Want to Learn More
+              See How It Works
             </Button>
           </div>
+          <p className={styles.social}>
+            <span className={styles.avatars} aria-hidden="true">
+              {['#4da3d9', '#18a673', '#12304a', '#f59e0b'].map((c, i) => (
+                <span key={i} className={styles.avatar} style={{ background: c }} />
+              ))}
+            </span>
+            Join <strong>hundreds</strong> already on the early-access list
+          </p>
         </div>
 
         <div className={styles.visual}>

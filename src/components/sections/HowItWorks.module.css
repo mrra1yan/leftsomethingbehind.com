@@ -1,3 +1,7 @@
+.howItWorks {
+  background: var(--color-background);
+}
+
 .grid {
   margin-top: var(--space-12);
   display: grid;
@@ -5,8 +9,17 @@
   gap: var(--space-6);
 }
 
-.card {
+/* Each card is wrapped so we can absolutely-position the connector */
+.cardWrap {
   position: relative;
+}
+
+/* Dashed connector line — sits between the icon centres at desktop */
+.connector {
+  display: none;
+}
+
+.card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14,9 +27,10 @@
   padding: var(--space-8);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
+  border-radius: var(--radius-feature);
   box-shadow: var(--shadow-sm);
   transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  height: 100%;
 }
 
 .card:hover {
@@ -25,32 +39,74 @@
   border-color: var(--color-primary-light);
 }
 
-.card:hover .number {
-  color: var(--color-primary-light);
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .number {
-  position: absolute;
-  top: var(--space-6);
-  right: var(--space-6);
-  font-size: var(--fs-h3);
+  font-size: 40px;
   font-weight: 800;
-  color: var(--color-border-strong);
-  transition: color 0.25s ease;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  /* gradient number */
+  background: linear-gradient(135deg, var(--color-border-strong) 0%, var(--color-border) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: background 0.25s ease;
+}
+
+.card:hover .number {
+  background: linear-gradient(135deg, var(--color-accent-blue) 0%, var(--color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .cardTitle {
   margin: 0;
+  font-size: var(--fs-h3);
+  font-weight: 700;
 }
 
 .cardDescription {
   margin: 0;
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.65;
+  font-size: var(--fs-body);
 }
 
+/* ── Desktop 3-col layout ── */
 @media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  /* Connector: absolute line from right edge of this card's icon to the left edge of the next */
+  .cardWrap {
+    padding-right: var(--space-6);
+  }
+
+  .cardWrap:last-child {
+    padding-right: 0;
+  }
+
+  .connector {
+    display: block;
+    position: absolute;
+    top: calc(var(--space-8) + 28px); /* align with icon vertical centre */
+    right: calc(-1 * var(--space-3));
+    width: calc(var(--space-6) + 2px);
+    height: 0;
+    border-top: 2px dashed var(--color-border-strong);
+    z-index: 1;
+  }
+
+  .card {
+    padding: var(--space-8) var(--space-6);
   }
 }
