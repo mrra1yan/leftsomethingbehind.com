@@ -2,6 +2,8 @@
   position: relative;
   overflow: hidden;
   background: var(--color-primary);
+  /* Hairline at the bottom so it visually separates from the footer */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 /* Subtle dot-grid using radial-gradient repeat */
@@ -41,7 +43,6 @@
   gap: var(--space-3);
 }
 
-/* Ghost button adapted for dark background */
 .ghostOnDark {
   color: var(--color-on-dark-secondary) !important;
 }

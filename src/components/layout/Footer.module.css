@@ -1,5 +1,6 @@
 .footer {
-  background: var(--color-primary);
+  /* Noticeably darker than FinalCta's --color-primary (#12304a) */
+  background: #0a1e2e;
   color: var(--color-on-dark);
 }
 
