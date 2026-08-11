@@ -71,10 +71,10 @@
 
 .answerText {
   margin: 0;
-  padding: 0 var(--space-6) var(--space-6);
+  /* Match question horizontal padding, add equal top/bottom breathing room */
+  padding: var(--space-4) var(--space-6) var(--space-5);
   font-size: var(--fs-body);
   color: var(--color-text-secondary);
   line-height: 1.7;
   border-top: 1px solid var(--color-border);
-  padding-top: var(--space-4);
 }
