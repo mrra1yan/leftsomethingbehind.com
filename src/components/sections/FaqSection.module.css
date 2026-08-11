@@ -60,6 +60,8 @@
 
 /* Animated height */
 .answer {
+  /* Reset browser default <dd> indent */
+  margin: 0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -71,7 +73,6 @@
 
 .answerText {
   margin: 0;
-  /* Match question horizontal padding, add equal top/bottom breathing room */
   padding: var(--space-4) var(--space-6) var(--space-5);
   font-size: var(--fs-body);
   color: var(--color-text-secondary);
